@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <div class="place" style="text-align:center;">
+        <button class="button" style="position:absolute;top:50%;" onclick="play()">Wanna Play?</button>
+    </div>
+
+<script>
+    function getRandomInRange(from, to, fixed) {
+		var lat = (Math.random() * (to - from) + from).toFixed(fixed) * 1
+		var long = (Math.random() * (to - from) + from).toFixed(fixed) * 1
+		return [long, lat]
+    }
+    function play(){
+        const [long, lat] = getRandomInRange(-180, 180, 3)
+		console.log(long)
+		console.log(lat)
+    }
+</script>
+</html>
